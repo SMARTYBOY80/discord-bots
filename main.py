@@ -158,12 +158,3 @@ async def clear_error(ctx, error):
         await ctx.send("You cant do that!")
                           
 bot.run(' OTM0NTMyNjU0OTI4MzcxNzgy.YexdWw.SvOUOKFCpFIbumXm-aDSf9iuyqQ')
-
-#python discord bot code above ^^
-from flask import Flask
-app = Flask(__name__)
-@app.route('/')
-def index():
-  return "Bot up and running"
-if __name__ == '__main__':
-  app.run(host="0.0.0.0",debug=True,port=8080)
