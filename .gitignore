@@ -3,7 +3,8 @@
 poetry.lock
 pyproject.toml
 replit.nix
-/.venv/
-/bot_config/
+.venv
+bot_config
 *.json
 __pycache__
+.vscode

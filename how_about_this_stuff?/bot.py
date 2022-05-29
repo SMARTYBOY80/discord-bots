@@ -52,10 +52,16 @@ intents.members = True
 bot = commands.Bot(command_prefix=get_prefix, case_insensitive=True, intents=intents, help_command=None)
 
 #gets the config file and respective information (the file should be /bot_config/secrets.json)
-secret_file = json.load(open(cwd+"/bot_config/secrets.json"))
-bot.config_token = secret_file["token"]
-bot.connection_url = secret_file["mongo"]
-bot.dad_joke_key = secret_file["DadjokeKey"]
+replit_file = json.load(open(cwd+"/bot_config/replit.json"))
+if replit_file["onReplit"] == "yes":  
+    secret_file = json.load(open(cwd+"/bot_config/secrets.json"))
+    bot.config_token = secret_file["token"]
+    bot.config_token = secret_file["mongo"]
+    bot.dad_joke_key = secret_file["DadjokeKey"]
+else:
+    bot.config_token = os.environ["token"]
+    bot.config_token = os.environ["mongo"]
+    bot.dad_joke_key = os.environ["DadjokeKey"]
 
 #defines some variables
 bot.version = "2.3.0"
