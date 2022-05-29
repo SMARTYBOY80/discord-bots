@@ -31,7 +31,7 @@ class Misc(commands.Cog):
     async def _sum(self, ctx, numOne: int, numTwo: int):   
         await ctx.reply(numOne + numTwo)
 
-    @commands.command(name="serverinfo", aliases=["guildinfo", "guild"], description="Displays server information")
+    @commands.command(name="serverinfo", aliases=["guildinfo", "guild", "server"], description="Displays server information")
     async def _serverinfo(self, ctx):
         embed = discord.Embed(title=f"{ctx.guild.name}", description="the info of the server", timestamp=datetime.datetime.utcnow(), color=discord.Color.blue())
         embed.add_field(name="Server created at", value=f"{ctx.guild.created_at}")
