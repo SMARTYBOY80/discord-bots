@@ -1,0 +1,8 @@
+.gitpod.yml
+.replit
+poetry.lock
+pyproject.toml
+replit.nix
+/.venv/
+/bot_config/
+*.json
