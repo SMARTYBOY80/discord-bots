@@ -1,7 +1,7 @@
 # Installation
 
 If not on replit:
-\nInstall dependencies
+Install dependencies
 ```
 python -m venv .venv
 pyenv shell
