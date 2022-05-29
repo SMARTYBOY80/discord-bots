@@ -1,8 +1,9 @@
-import discord
-from discord.ext import commands
 import datetime
 import random
 import os
+import discord
+from discord.ext import commands
+
 #getting token out of the secrets tab
 my_secret = os.environ['Token']
 

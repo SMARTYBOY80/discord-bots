@@ -6,3 +6,4 @@ replit.nix
 /.venv/
 /bot_config/
 *.json
+__pycache__

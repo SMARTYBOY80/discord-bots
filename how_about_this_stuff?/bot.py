@@ -91,7 +91,7 @@ bot.colour_list = [colour for colour in bot.colours.values()]
 #when bot is ready
 @bot.event
 async def on_ready():
-    print(f"---------------------------------------------------------- \nLogged in as: {bot.user.name} : {bot.user.id} \n----------------------------------------------------------")
+    print(f"Logged in as: {bot.user.name} : {bot.user.id} \n----------------------------------------------------------")
     await bot.change_presence(activity=discord.Game(name=f"Testing Testing 1, 2, 3"))
 
     #attempts to connect to the database
