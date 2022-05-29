@@ -2,6 +2,10 @@ import discord
 from discord.ext import commands
 import datetime
 import random
+import os
+
+my_secret = os.environ['Token']
+
 
 bot = commands.Bot(command_prefix='>', description="This is a Helper Bot")
 
@@ -131,19 +135,6 @@ async def poll(ctx, question, option1=None, option2=None):
     await message.add_reaction('✅')
     await message.add_reaction('❎')
 
-#channel = discord.utils.get(bot.get_all_channels())
-#print(channel)
-#channel_id = channel.id
-#print(channel_id)
-#@bot.command()
-#async def id(ctx):
- # channel = bot.get_channel(channel_id)
-  #ctx.send(channel)
-  #print(channel)
-
-
-
-
 @bot.command(pass_context=True)
 @commands.has_permissions(administrator=True)
 async def purge(ctx, limit: int):
@@ -157,4 +148,5 @@ async def clear_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("You cant do that!")
                           
-bot.run(' OTM0NTMyNjU0OTI4MzcxNzgy.YexdWw.SvOUOKFCpFIbumXm-aDSf9iuyqQ')
+bot.run(my_secret)
+
