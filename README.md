@@ -1,7 +1,7 @@
 # Installation
 
 If not on replit:
-Install dependencies
+\nInstall dependencies
 ```
 python -m venv .venv
 pyenv shell
@@ -13,6 +13,7 @@ Create Secrets file
 mkdir bot_config
 cd bot_config
 touch secrets.json
+secrets for "token", "mongo" and "DadjokeKey"
 ```
 
 If on replit:
@@ -26,5 +27,5 @@ install requirements.txt through replit
 Create secrets
 ```
 change /bot_config/replit.json "onReplit" to "yes"
-add secrets for "token", "mongo" and "DadjokeKey"
+add secrets for "token", "mongo" and "DadjokeKey" through replit
 ```
