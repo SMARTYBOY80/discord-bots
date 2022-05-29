@@ -1,6 +1,4 @@
-# Installation
-
-If not on replit:
+#If not on replit:
 Install dependencies
 ```
 python -m venv .venv
@@ -16,7 +14,7 @@ touch secrets.json
 secrets for "token", "mongo" and "DadjokeKey"
 ```
 
-If on replit:
+#If on replit:
 Install dependencies
 ```
 python -m venv .venv
