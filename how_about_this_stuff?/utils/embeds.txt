@@ -1,0 +1,50 @@
+#embed cheatsheet
+
+embed = discord.Embed(
+    title="this is a title",
+    colour=discord.Colour(0x0061ff),
+    url="https://discordapp.com",
+    description="This is a description",
+    timestamp=ctx.message.created_at
+)
+embed.set_image(url="https://cdn.discordapp.com/embed/avatars/0.png")
+embed.set_thumbnail(url="https://cdn.discordapp.com/embed/avatars/1.png")
+embed.set_author(
+    name="author name",
+    url="https://discord.com",
+    icon_url="https://cdn.discordapp.com/embed/avatars/2.png"
+)
+embed.set_footer(
+    text="footer text",
+    icon_url="https://cdn.discordapp.com/embed/avatars/3.png"
+)
+embed.add_field(
+    name="footer title",
+    value="stuff"
+)
+embed.add_field(
+    name="another footer title",
+    value="more stuff"
+)
+embed.add_field(
+    name="inline",
+    value="these last two fields",
+    inline=True
+)
+embed.add_field(
+    name="inline",
+    value="are inline!",
+    inline=True
+)
+await ctx.send(
+    content="this is a normal message that willbe sent alongside the embed",
+    embed=embed
+)
+#to send a file as an embed
+embed=discord.Embed()
+embed.set_image(url="attachment://hello.png")
+image = discord.File("hello.png")
+await ctx.send(
+    embed=embed,
+    file=image
+)
