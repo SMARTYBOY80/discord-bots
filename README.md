@@ -1,4 +1,5 @@
 #If not on replit:
+
 Install dependencies
 ```
 python -m venv .venv
@@ -15,6 +16,7 @@ secrets for "token", "mongo" and "DadjokeKey"
 ```
 
 #If on replit:
+
 Install dependencies
 ```
 python -m venv .venv
