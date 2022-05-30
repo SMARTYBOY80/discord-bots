@@ -53,7 +53,7 @@ bot = commands.Bot(command_prefix=get_prefix, case_insensitive=True, intents=int
 
 #gets the config file and respective information (the file should be /bot_config/secrets.json)
 replit_file = json.load(open(cwd+"/bot_config/replit.json"))
-if replit_file["onReplit"] == "yes":  
+if replit_file["onReplit"] == "no":  
     secret_file = json.load(open(cwd+"/bot_config/secrets.json"))
     bot.config_token = secret_file["token"]
     bot.config_token = secret_file["mongo"]

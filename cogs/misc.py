@@ -4,23 +4,25 @@ import discord
 from discord.ext import commands
 import asyncio
 import os
+import random
 from aiohttp import ClientSession
 from utils.custom import TimeConverter
 from utils.custom import GetMessage
+import datetime
 
 
 class Misc(commands.Cog):
 
-  def __init__(self, bot):
-    self.bot = bot
+    def __init__(self, bot):
+        self.bot = bot
 
-  @commands.Cog.listener()
-  async def on_ready(self):
-    print(f"{self.__class__.__name__} Cog has been loaded\n----------------------------------------------------------")
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print(f"{self.__class__.__name__} Cog has been loaded\n----------------------------------------------------------")
 
     @commands.command(name="ping", description="Displays current latency.")
     async def _ping(self, ctx):
-        await ctx.reply(f'Pong \nLatency: {round(bot.latency * 1000)}ms')
+        await ctx.reply(f'Pong \nLatency: {round(self.bot.latency * 1000)}ms')
 
     @commands.command(name="hello", aliases=["hi"], description="Says hello.")
     async def _hello(self, ctx):
@@ -49,9 +51,7 @@ class Misc(commands.Cog):
         while number < 11:
             await ctx.send(number)
             number += 1
-            asyncio.sleep(2)
-
-    
+            asyncio.sleep(1)
 
 def setup(bot):
     bot.add_cog(Misc(bot))
