@@ -12,9 +12,6 @@ Create Secrets file
 mkdir bot_config
 cd bot_config
 touch secrets.json
-<<<<<<< HEAD
-```
-=======
 secrets for "token", "mongo" and "DadjokeKey"
 ```
 
@@ -32,4 +29,3 @@ Create secrets
 change /bot_config/replit.json "onReplit" to "yes"
 add secrets for "token", "mongo" and "DadjokeKey" through replit
 ```
->>>>>>> 1918f6864b35989c3ea2dfa3b87976dab9cdf1a1
